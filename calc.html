@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Калькулятор стоимости баннера</title>
+        <link rel="stylesheet" href="calc.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+		
+    </head>
+    <body>
+    <header class="header">
+        <div class="line_top container"></div>
+        <div class="header_mid container"><a href="#" class="logo"><img src="img/logo-pink.svg" alt="logo" class="logo_class"></a>
+        <h1 class="header_text">Калькулятор расчета стоимости баннера </h1>
+        </div>
+        <div class="line_bottom">
+           <div class="container">
+               <a href="#" class="settings" id="drop_menu" onfocus="drop()">Настройки
+               <div class="drop_menu" id="drop_list">
+                   <div class="drop_block"><p class="DropText" >Стоимость печати</p>
+                   <input type="text" class="input_size" id="price" value="1000" oninput="start()"></div>
+                   <div class="drop_block"><p class="DropText">Стоимость проклейки</p><input type="text" class="input_size" id="priceProkleika" value="70" oninput="start()"></div>
+                   <div class="drop_block"><p class="DropText">Стоимость люверса</p><input type="text" class="input_size" id="priceLuvers" value="15" oninput="start())"></div>
+                   <div class="drop_block"> <button class="OutButton" onclick="DropOut()">Закрыть окно</button></div>
+                
+               </div>
+               
+               </a>
+               
+               
+           </div>
+            
+        </div>
+    </header>  
+    <div class="calc_block container">
+        <div class="block_h2 container">Укажите размеры баннера</div>
+        <div class="size_block container">
+            <div class="item_block2">
+                <p>Длина</p>
+                <input type="text" class="input_size" id="dlina" oninput="start()"
+                placeholder="Длина в метрах">
+                </div>
+            
+            <div class="item_block">
+                 <p>Высота</p>
+                 <input type="text" class="input_size" id="visota" oninput="start()"
+                 placeholder="Высота в метрах">
+            </div>  
+        </div>
+        <div class="block_h2 container">Стоимость изготовления</div>
+        <div class="size_block container">
+            <div class="item_block2">
+                <p>Проклейка</p>
+                <input type="text" class="input_size" id="prokleikaOut" oninput="prokleika()">
+                </div>
+            
+            <div class="item_block">
+                 <p>Люверсы</p>
+                 <input type="text" class="input_size" id="luversOut" oninput="luvers()">
+            </div>  
+            <div class="item_block">
+                 <p>Печать</p>
+                 <input type="text" class="input_size" id="printPrice" oninput="area()">
+            </div>
+              <div class="item_block">
+                 <p>С обработкой</p>
+                 <input type="text" class="input_size" id="priceTotalOut"  oninput="priceTotal()">
+            </div>
+              
+        </div>
+        <div class="banner_box container" id="banner_box" >
+            <div class="box_visota" id="box_visota" oninput="render()"></div>
+            <div class="box_dlina" id="box_dlina" oninput="render()"></div>
+        </div>
+        <div class="banner_box_vertical container" id="banner_box_vertical" >
+            <div class="box_visota_vertical" id="box_visota_vertical" oninput="render()"></div>
+            <div class="box_dlina_vertical" id="box_dlina_vertical" oninput="render()"></div>
+        </div>
+        <div class="banner_box_kvadrat container" id="banner_box_kvadrat" >
+            <div class="box_visota_kvadrat" id="box_visota_kvadrat" oninput="render()"></div>
+            <div class="box_dlina_kvadrat" id="box_dlina_kvadrat" oninput="render()"></div>
+        </div>
+        
+       
+    </div>
+    
+    <div class="footer"></div>
+    
+ <script src="calc.js"></script>
+       
+    </body>
+</html>
